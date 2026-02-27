@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen overflow-hidden">
+
+    <div class="w-[360px] h-[740px] bg-white rounded-[35px] border-[8px] border-black shadow-2xl overflow-hidden flex flex-col">
+        
+        <div class="bg-[#1D61E7] p-8 pt-10 text-white">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <p class="text-[11px] font-light">Good Morning</p>
+                    <h2 class="text-xl font-bold">John Doe</h2>
+                </div>
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center border border-white/30">
+                    <i class="fa-solid fa-user text-xl"></i>
+                </div>
+            </div>
+
+            <div class="border border-white/50 rounded-xl p-5 bg-white/5">
+                <p class="text-[11px] opacity-80">Total Balance</p>
+                <p class="text-3xl font-bold mt-1">$5,250.75</p>
+            </div>
+        </div>
+
+        <div class="flex-grow overflow-y-auto px-6 py-4 custom-scrollbar">
+    <div class="flex flex-col items-center mb-6">
+        <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center border-2 border-blue-500">
+            <i class="fa-solid fa-user text-4xl text-blue-600"></i>
+        </div>
+    </div>
+
+    <form id="profileForm" class="space-y-4">
+        <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Name:</label>
+            <input type="text" name="name" placeholder="John Doe" 
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+        </div>
+
+        <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Email:</label>
+            <input type="email" name="email" placeholder="john.doe@example.com" 
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+        </div>
+
+        <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Mobile:</label>
+            <input type="tel" name="mobile" placeholder="+1 234 567 8901" 
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+        </div>
+
+        <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Gender:</label>
+            <select name="gender" 
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Address:</label>
+            <textarea name="address" rows="2" placeholder="123 Main St, City, Country" 
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"></textarea>
+        </div>
+
+        <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Password:</label>
+            <input type="password" name="password" placeholder="********" 
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+        </div>
+
+        <button type="submit" class="w-full bg-[#1D61E7] hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg active:scale-95 transition-all mt-4 mb-6">
+            Update Profile
+        </button>
+    </form>
+</div>
+
+<style>
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+</style>
+            
+
+        
+
+        <footer id="appFooter" class="bg-[#1D61E7] h-16 min-h-[64px] shrink-0 grid grid-cols-4 items-center text-white
+    [&>a]:flex [&>a]:flex-col [&>a]:items-center [&>a]:justify-center [&>a]:h-full [&>a]:transition-all [&>a]:duration-300 [&>a]:opacity-70
+    [&>a:hover]:bg-white/10 [&>a:hover]:opacity-100
+    [&>a.active]:bg-black/20 [&>a.active]:opacity-100 [&>a.active]:font-bold
+    [&>a:not(:last-child)]:border-r [&>a:not(:last-child)]:border-white/10">
+
+    <a href="./dashboard.html" class="active">
+        <i class="fa-solid fa-house text-lg"></i>
+        <span class="text-[10px] mt-1">Home</span>
+    </a>
+
+    <a href="./history.html">
+        <i class="fa-solid fa-rotate-left text-lg"></i>
+        <span class="text-[10px] mt-1">History</span>
+    </a>
+
+    <a href="./profile.html">
+        <i class="fa-solid fa-user text-lg"></i>
+        <span class="text-[10px] mt-1">Profile</span>
+    </a>
+
+    <a href="./logout.html">
+        <i class="fa-solid fa-right-from-bracket text-lg"></i>
+        <span class="text-[10px] mt-1">Logout</span>
+    </a>
+
+</footer>
+
+
+
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('#appFooter a');
+
+        navLinks.forEach(link => {
+            
+            link.classList.remove('active');
+            
+            if (currentPath.includes(link.getAttribute('href').substring(2))) {
+                link.classList.add('active');
+            }
+        });
+        
+       
+        if (currentPath === "/" || currentPath.endsWith("index.html")) {
+            document.querySelector('a[href="./dashboard.html"]').classList.add('active');
+        }
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('#appFooter a');
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (currentPath.includes(link.getAttribute('href').substring(2))) {
+                link.classList.add('active');
+            }
+        });
+        
+        
+        if (currentPath === "/" || currentPath.endsWith("index.html")) {
+            document.querySelector('a[href="./dashboard.html"]').classList.add('active');
+        }
+    });
+</script>
+<script>
+    if (localStorage.getItem("loggedIn") && localStorage.getItem("loggedIn") === "true") {
+        let balance = localStorage.getItem("balance");
+        document.getElementById("balance").textContent = `BDT ${balance} Tk.`;
+    } else {
+        window.location.href = "login.html";
+    }
+</script>
+</body>
+</html>

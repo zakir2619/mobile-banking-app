@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen overflow-hidden">
+
+    <main class="w-[360px] h-[740px] bg-white rounded-[35px] border-[8px] border-black shadow-2xl overflow-hidden flex flex-col">
+        
+        <div class="bg-[#1D61E7] p-8 pt-5 text-white">
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <p class="text-[11px] font-light">Good Morning</p>
+                    <h2 class="text-xl font-bold">John Doe</h2>
+                </div>
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center border border-white/30">
+                    <i class="fa-solid fa-user text-xl"></i>
+                </div>
+            </div>
+
+            <div class="border border-white/50 rounded-xl px-5 py-3 bg-white/5">
+                <p class="text-[11px] opacity-80">Total Balance</p>
+                <p class="text-3xl font-bold mt-1" id="balance">$5,250.75</p>
+            </div>
+        </div>
+
+        
+            <main class="px-6 -mt-6 grid grid-cols-4 p-2 justify-between gap-1 [&>a]:flex-1
+[&>a]:bg-white
+[&>a]:border
+[&>a]:border-gray-300
+[&>a]:aspect-square
+[&>a]:rounded-lg
+[&>a]:py-3
+[&>a]:flex
+[&>a]:flex-col
+[&>a]:items-center
+[&>a]:justify-center
+[&>a]:cursor-pointer
+[&>a]:transition-all
+[&>a]:duration-300
+[&>a:hover]:bg-blue-600">
+                
+                <a href="./addmoney.html">
+                    <i class="fa-solid fa-download text-lg mb-1"></i>
+                    <span class="text-[9px] font-bold">Add money</span>
+                </a>
+
+                <a href="./cashout.html">
+                    <i class="fa-solid fa-upload text-lg mb-1"></i>
+                    <span class="text-[9px] font-bold">Cash Out</span>
+                </a>
+
+                <a href="./sendmoney.html">
+                    <i class="fa-solid fa-paper-plane text-lg mb-1"></i>
+                    <span class="text-[9px] font-bold">Send money</span>
+                </a>
+
+                <a href="./billpay.html">
+                    <i class="fa-solid fa-hand-holding-dollar text-lg mb-1"></i>
+                    <span class="text-[9px] font-bold">Bill Pay</span>
+                </a>
+            </main>
+        <main class="p-6 space-y-5">
+<form action="" id="cashOutForm">
+    <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Agent Number</label>
+        <div class="relative">
+            <input type="text" name="agent" placeholder="Enter Agent Number" required
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+            <i class="fa-solid fa-address-book absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        </div>
+    </div>
+
+    <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Amount</label>
+        <input type="number" name="amount" placeholder="$0.00" required
+            class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+    </div>
+
+    <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Enter PIN</label>
+        <input type="password" name="pin" placeholder="****" maxlength="4" required
+            class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-gray-50 outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+    </div>
+
+    <button id="cashOutBtn" type="submit" class="w-full bg-[#E71D36] hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg active:scale-95 transition-all mt-2">
+        Cash Out
+    </button>
+</form>
+    </main>    
+
+        <div class="mt-auto pb-2 flex justify-center w-full">
+            <div class="w-24 h-1 bg-gray-200 rounded-full"></div>
+        </div>
+
+       <footer id="appFooter" class="bg-[#1D61E7] h-16 min-h-[64px] shrink-0 grid grid-cols-4 items-center text-white
+    [&>a]:flex [&>a]:flex-col [&>a]:items-center [&>a]:justify-center [&>a]:h-full [&>a]:transition-all [&>a]:duration-300 [&>a]:opacity-70
+    [&>a:hover]:bg-white/10 [&>a:hover]:opacity-100
+    [&>a.active]:bg-black/20 [&>a.active]:opacity-100 [&>a.active]:font-bold
+    [&>a:not(:last-child)]:border-r [&>a:not(:last-child)]:border-white/10">
+
+    <a href="./dashboard.html" class="active">
+        <i class="fa-solid fa-house text-lg"></i>
+        <span class="text-[10px] mt-1">Home</span>
+    </a>
+
+    <a href="./history.html">
+        <i class="fa-solid fa-rotate-left text-lg"></i>
+        <span class="text-[10px] mt-1">History</span>
+    </a>
+
+    <a href="./profile.html">
+        <i class="fa-solid fa-user text-lg"></i>
+        <span class="text-[10px] mt-1">Profile</span>
+    </a>
+
+    <a href="./logout.html">
+        <i class="fa-solid fa-right-from-bracket text-lg"></i>
+        <span class="text-[10px] mt-1">Logout</span>
+    </a>
+
+</footer>
+</div>
+<script>
+        document.getElementById('cashOutBtn').addEventListener('click', function() {
+            const amount = document.getElementById('cashOutAmount').value;
+            const agent = document.getElementById('agentNumber').value;
+            
+            if(amount && agent) {
+                alert(`Processing Cash Out of $${amount} to Agent ${agent}`);
+            } else {
+                alert('Please fill in all details');
+            }
+        });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('#appFooter a');
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (currentPath.includes(link.getAttribute('href').substring(2))) {
+                link.classList.add('active');
+            }
+        });
+        
+        
+        if (currentPath === "/" || currentPath.endsWith("index.html")) {
+            document.querySelector('a[href="./dashboard.html"]').classList.add('active');
+        }
+    });
+</script>
+<script>
+    let balance = localStorage.getItem("balance");
+    const cashOutForm = document.getElementById("cashOutForm");
+    cashOutForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const formData = new FormData(cashOutForm);
+        const amount = parseFloat(formData.get("amount"));
+        const agent = formData.get("agent");
+        const pin = formData.get("pin");
+
+        if (amount > 0 && agent && pin.length === 4) {
+            if (amount > balance) {
+                alert("Insufficient balance for this cash out.");
+            } else {
+                balance -= amount;
+                localStorage.setItem("balance", balance);
+                document.getElementById("balance").textContent = `BDT ${balance} Tk.`;
+                alert(`Successfully cashed out BDT ${amount} to Agent ${agent}.`);
+                cashOutForm.reset();
+            }
+        } else {
+            alert("Please enter valid details for cash out.");
+        }
+    })
+
+    if (localStorage.getItem("loggedIn") && localStorage.getItem("loggedIn") === "true") {
+        
+        document.getElementById("balance").textContent = `BDT ${balance} Tk.`;
+    } else {
+        window.location.href = "login.html";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Banking App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
+</style>  
+</head>
+  
+<body class="bg-gray-100 flex justify-center items-center min-h-screen p-4">
+
+    <div class="w-full max-w-[380px] h-[90vh] max-h-[740px] bg-white rounded-[40px] shadow-2xl border-[8px] border-white overflow-hidden flex flex-col relative">
+        
+        <div class="h-10 w-full"></div>
+
+        <div class="px-8 flex flex-col items-center">
+            
+            <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mt-6 mb-4">
+                <i class="fa-solid fa-house text-white text-2xl"></i>
+            </div>
+
+            <h1 class="text-2xl font-bold text-gray-800">Mobile Banking</h1>
+            <p class="text-sm text-gray-500 mt-1">Sign in to your account</p>
+
+            <form id="loginForm" class="w-full mt-10 space-y-6">
+                
+                <div class="space-y-2">
+                    <label for="email" class="block text-sm font-semibold text-gray-600">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="space-y-2">
+                    <label for="password" class="block text-sm font-semibold text-gray-600">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <button 
+                    type="submit" 
+                    class="w-full bg-[#2E63F6] hover:bg-blue-700 text-white font-semibold py-3.5 rounded-lg transition-colors duration-300 mt-4 shadow-md active:scale-[0.98]"
+                >
+                    Sign In
+                </button>
+
+            </form>
+        </div>
+
+        <div class="mt-auto mb-2 flex justify-center w-full">
+            <div class="w-32 h-1.5 bg-gray-200 rounded-full"></div>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", e => {
+            e.preventDefault();
+            e.stopPropagation();
+            const formData = new FormData(e.target);
+            const email = formData.get("email");
+            const password = formData.get("password");
+           if (email === "user@example.com" && password === "pass1234"){
+                localStorage.setItem("loggedIn", "true");
+                localStorage.setItem("balance", 5000);
+                alert("Login successful")
+                window.location.href = "dashboard.html";
+           } else {
+            alert ("Invalid email or password")
+           }
+           if(localStorage.getItem("loggedIn") && localStorage.getItem("loggedIn") === "true"){
+            window.location.href = "dashboard.html";
+            alert ("Already Logged In")
+           } else {
+            window.location.href = "index.html";
+           }
+        })
+    </script>
+<script src="./script.js"></script>
+</body>
+</html>

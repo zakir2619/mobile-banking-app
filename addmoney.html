@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen overflow-hidden">
+
+    <main class="w-[360px] h-[740px] bg-white rounded-[35px] border-[8px] border-black shadow-2xl overflow-hidden flex flex-col">
+        
+        <div class="bg-[#1D61E7] p-8 pt-5 text-white">
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <p class="text-[11px] font-light">Good Morning</p>
+                    <h2 class="text-xl font-bold">John Doe</h2>
+                </div>
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center border border-white/30">
+                    <i class="fa-solid fa-user text-xl"></i>
+                </div>
+            </div>
+
+            <div class="border border-white/50 rounded-xl px-5 py-3 bg-white/5">
+                <p class="text-[11px] opacity-80">Total Balance</p>
+                <p class="text-3xl font-bold mt-1" id="balance">$5,250.75</p>
+            </div>
+        </div>
+
+        
+            <main class="px-6 -mt-6 grid grid-cols-4 p-2 justify-between gap-1 [&>a]:flex-1
+[&>a]:bg-white
+[&>a]:border
+[&>a]:border-gray-300
+[&>a]:aspect-square
+[&>a]:rounded-lg
+[&>a]:py-3
+[&>a]:flex
+[&>a]:flex-col
+[&>a]:items-center
+[&>a]:justify-center
+[&>a]:cursor-pointer
+[&>a]:transition-all
+[&>a]:duration-300
+[&>a:hover]:bg-blue-600">
+                
+                <a href="./addmoney.html">
+                    <i class="fa-solid fa-download text-lg mb-1"></i>
+                    <span class="text-[9px] font-bold">Add money</span>
+                </a>
+
+                <a href="./cashout.html">
+                    <i class="fa-solid fa-upload text-lg mb-1"></i>
+                    <span class="text-[9px] font-bold">Cash Out</span>
+                </a>
+
+                <a href="./sendmoney.html">
+                    <i class="fa-solid fa-paper-plane text-lg mb-1"></i>
+                    <span class="text-[9px] font-bold">Send money</span>
+                </a>
+
+                <a href="./billpay.html">
+                    <i class="fa-solid fa-hand-holding-dollar text-lg mb-1"></i>
+                    <span class="text-[9px] font-bold">Bill Pay</span>
+                </a>
+            </main>
+        
+            
+
+    
+    <main class="p-6 space-y-5">
+<form action=" " id="addMoneyForm">
+    <div class="p-6 space-y-4
+
+[&_label]:block [&_label]:text-sm [&_label]:font-semibold [&_label]:text-gray-700 [&_label]:mb-2
+
+[&_select]:w-full [&_select]:px-4 [&_select]:py-2 [&_select]:rounded-xl [&_select]:border [&_select]:border-gray-300 [&_select]:bg-gray-50 [&_select]:outline-none
+
+[&_input]:w-full [&_input]:px-4 [&_input]:py-3 [&_input]:rounded-xl [&_input]:border [&_input]:border-gray-300 [&_input]:bg-gray-50 [&_input]:outline-none [&_input]:transition-all
+
+[&_input:focus]:ring-2 [&_input:focus]:ring-blue-500 [&_input:focus]:border-transparent" id="addMoneyForm">
+
+
+<div>
+
+<label for="sourceSelect">Select Source:</label>
+
+<select id="sourceSelect" name="source">
+
+<option value="bank" selected>Bank Account</option>
+
+<option value="debit">Debit Card</option>
+
+<option value="credit">Credit Card</option>
+
+</select>
+
+</div>
+
+
+
+<div>
+
+<label for="amountInput">Enter Amount to Add:</label>
+
+<input type="number" id="amountInput" name="amount" placeholder="$0.00">
+
+</div>
+
+
+
+<button class="w-full bg-[#2E63F6] hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg active:scale-95 transition-all mt-4">
+
+Add Money
+
+</button>
+</form>
+    </main> 
+    
+
+        <div class="mt-auto pb-2 flex justify-center w-full">
+            <div class="w-24 h-1 bg-gray-200 rounded-full"></div>
+        </div>
+
+        <footer id="appFooter" class="bg-[#1D61E7] h-16 min-h-[64px] shrink-0 grid grid-cols-4 items-center text-white
+    [&>a]:flex [&>a]:flex-col [&>a]:items-center [&>a]:justify-center [&>a]:h-full [&>a]:transition-all [&>a]:duration-300 [&>a]:opacity-70
+    [&>a:hover]:bg-white/10 [&>a:hover]:opacity-100
+    [&>a.active]:bg-black/20 [&>a.active]:opacity-100 [&>a.active]:font-bold
+    [&>a:not(:last-child)]:border-r [&>a:not(:last-child)]:border-white/10">
+
+    <a href="./dashboard.html" class="active">
+        <i class="fa-solid fa-house text-lg"></i>
+        <span class="text-[10px] mt-1">Home</span>
+    </a>
+
+    <a href="./history.html">
+        <i class="fa-solid fa-rotate-left text-lg"></i>
+        <span class="text-[10px] mt-1">History</span>
+    </a>
+
+    <a href="./profile.html">
+        <i class="fa-solid fa-user text-lg"></i>
+        <span class="text-[10px] mt-1">Profile</span>
+    </a>
+
+    <a href="./logout.html">
+        <i class="fa-solid fa-right-from-bracket text-lg"></i>
+        <span class="text-[10px] mt-1">Logout</span>
+    </a>
+
+</footer>
+
+
+
+</div>
+<script>
+        const source = document.getElementById('sourceSelect');
+        source.addEventListener('click', (e) => {
+            const selectedValue = e.target.value;
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'sourceName';
+            input.className = 'w-full px-4 py-3 mt-3 rounded-xl border border-gray-300 bg-gray-50 outline-none transition-all focus:ring-2 focus:ring-blue-500 focus:border-transparent';
+            
+            if (selectedValue === 'bank') {
+                input.placeholder = 'Bank Account Number';
+                
+            } else if (selectedValue === 'debit') {
+                input.placeholder = 'Debit Card Number';
+                
+            } else if (selectedValue === 'credit') {
+                input.placeholder = 'Credit Card Number';
+                
+            }
+            const existingInput = document.querySelector('input[name="sourceName"]');
+            if (existingInput) {    existingInput.remove();}
+            source.insertAdjacentElement('afterend', input);
+
+        });
+        
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('#appFooter a');
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (currentPath.includes(link.getAttribute('href').substring(2))) {
+                link.classList.add('active');
+            }
+        });
+        
+        
+        if (currentPath === "/" || currentPath.endsWith("index.html")) {
+            document.querySelector('a[href="./dashboard.html"]').classList.add('active');
+        }
+    });
+</script>
+<script>
+    const addMoneyForm = document.getElementById("addMoneyForm");
+    let balance = +localStorage.getItem("balance");
+    addMoneyForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const formData = new FormData(addMoneyForm);
+        const source = formData.get("source");
+        const sourceName = formData.get("sourceName");
+        const amount = formData.get("amount");
+        const transaction = {
+            id: Date.now(),
+            type: 'add-money',
+            source,
+            sourceName,
+            amount,
+            Date: new Date().toLocaleString()
+        }
+        if (!localStorage.getItem("transactions")) {
+            localStorage.setItem("transactions", JSON.stringify([transaction]));
+        } else {
+            const existingTransactions = JSON.parse(localStorage.getItem("transactions"));
+            existingTransactions.push(transaction);
+            localStorage.setItem("transactions", JSON.stringify(existingTransactions));
+        }
+        balance += parseFloat(amount);
+        localStorage.setItem("balance", balance);
+        alert("Money Added Successfully!");
+        addMoneyForm.reset();
+        document.getElementById("balance").textContent = `BDT ${balance} Tk.`;
+    })
+    if(localStorage.getItem("loggedIn") && localStorage.getItem("loggedIn") === "true") {
+        document.getElementById("balance").textContent = `BDT ${balance} Tk.`;
+    } else {
+        window.location.href = "login.html";
+    }
+</script>
+</body>
+</html>
